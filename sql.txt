@@ -9,3 +9,8 @@ Paste the SQL statement you used below.  Hint: EmployeeName is not a column in t
 report with EmployeeName by starting your SQL this way: SELECT (Employees.FirstName || " " || Employees.LastName) AS EmployeeName,
 
 
+SELECT OrderID, ProductName, Quantity FROM OrderDetails INNER JOIN Products ON OrderDetails.ProductID = Products.ProductID;
+
+SELECT (Employees.FirstName || " " || Employees.LastName) AS EmployeeName, ProductID, Quantity FROM Employees 
+INNER JOIN Orders ON Employees.EmployeeID = Orders.EmployeeID
+INNER JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID;
